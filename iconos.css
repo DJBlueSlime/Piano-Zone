@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'DJBlueFonts';
-  src:  url('Fonts/DJBlueFonts.eot?z6b8u3');
-  src:  url('Fonts/DJBlueFonts.eot?z6b8u3#iefix') format('embedded-opentype'),
-    url('Fonts/DJBlueFonts.ttf?z6b8u3') format('truetype'),
-    url('Fonts/DJBlueFonts.woff?z6b8u3') format('woff'),
-    url('Fonts/DJBlueFonts.svg?z6b8u3#DJBlueFonts') format('svg');
+  src:  url('DJBlueFonts.eot?z6b8u3');
+  src:  url('DJBlueFonts.eot?z6b8u3#iefix') format('embedded-opentype'),
+    url('DJBlueFonts.ttf?z6b8u3') format('truetype'),
+    url('DJBlueFonts.woff?z6b8u3') format('woff'),
+    url('DJBlueFonts.svg?z6b8u3#DJBlueFonts') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;

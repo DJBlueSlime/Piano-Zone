@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+Chettan+2:wght@700&display=swap" rel="stylesheet">
+
+  <title>Piano Notes</title>
+  <script type="text/javascript" charset="utf-8">
+  var finalNote;
+  window.onload = function(){
+      var genBtn = document.getElementById("gen").addEventListener("click",displayNote)
+      var Inote = document.getElementById("note");
+    }
+  
+  function genNote(){
+   window.onload = function(){
+     var Inote = document.getElementById("gen").addEventListener("click",)
+   }
+   
+  var notaAleatoria;
+  notaAleatoria = Math.random();
+  notaAleatoria = notaAleatoria * 7;
+  notaAleatoria = Math.ceil(notaAleatoria)
+  
+  if (notaAleatoria == 1) finalNote = "C"
+  if (notaAleatoria == 2) finalNote = "D"
+  if (notaAleatoria == 3) finalNote = "E"
+  if (notaAleatoria == 4) finalNote = "F"
+  if (notaAleatoria == 5) finalNote = "G"
+  if (notaAleatoria == 6) finalNote = "A"
+  if (notaAleatoria == 7) finalNote = "B"
+  
+  console.log(finalNote)
+  console.log(notaAleatoria)
+  displayNote();
+}
+function displayNote(){
+  var Inote = document.getElementById("note")
+      Inote.value = finalNote;
+}
+
+</script>
+  <!-- HTML -->
+  
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="estilos.css">
+  <link rel="stylesheet" href="iconos.css"/>
+</head>
+
+<body>
+  <div class="elem "id="elem"><p class="elemText">Play this note:</p>
+  </div>
+ <div class="displayContainer" id="displayContainer">
+  <div class="displayBox" id="displayBox">
+    <input type="text" class="noteDisplay" id="note" readonly value="" />
+  </div>
+  <div class="genBtn" id="genBtn">
+  <button type="submit" class="generate" id="gen"onclick=genNote()>
+    Generate Note <span class="icon-music"></span></span>
+  </button>
+  </div>
+ </div>
+
+</body>
+</html>

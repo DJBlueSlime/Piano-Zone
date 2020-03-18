@@ -16,6 +16,7 @@
       }
     }
   })
+  var uName = name;
   
   if(name){
     Swal.fire({
@@ -25,5 +26,6 @@
       confirmButtonText: "Ok",
       icon: "success"
     })
+    console.log(uName);
   }
 })()

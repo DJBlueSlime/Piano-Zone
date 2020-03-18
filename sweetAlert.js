@@ -9,7 +9,12 @@
     confirmButtonColor: "#21c24c",
     icon: "info",
     backdrop: true,
-    padding: "0.8rem"
+    padding: "0.8rem",
+    preConfirm: (value) => {
+      if(value == ''){
+        swal.showValidationMessage('No has ingresado ningun nombre. Por favor ingresa un nombre')
+      }
+    }
   })
   
   if(name){

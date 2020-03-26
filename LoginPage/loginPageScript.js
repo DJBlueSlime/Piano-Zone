@@ -1,6 +1,12 @@
-  // Your web app's Firebase configuration
-  var email = document.getElementById("email")
-  var password = document.getElementById("password")
+var loginForm = document.querySelector('#loginForm');
+  loginForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    
+    var email = loginForm['email'].value;
+    var password = loginForm['password'].value;
+    
+    console.log(email, password)
+  })
   
   var firebaseConfig = {
     apiKey: "AIzaSyCsFBpqVFA-5B0i4mL4cg2FHKQvgyX7qAY",

@@ -14,14 +14,14 @@
   <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-analytics.js"></script>
 </head>
 <body>
-<form action="" class="box" id="loginForm" method="post" accept-charset="utf-8">
+<form class="box" id="loginForm">
   <h1>Login</h1>
-  <input type="text" name="" id="email" placeholder="Email"/>
-  <input type="password" name="" id="password" placeholder="Password" />
-  <button class="sub" type="submit" id="subBtn">Log In</button>
+  <input type="text" name="" id="email" placeholder="Email" required/>
+  <input type="password" name="" id="password" placeholder="Password" required/>
+  <button class="sub" id="subBtn">Log In</button>
 </form>
 </body>
-<script type="text/javascript" charset="utf-8">
+<!-- <script type="text/javascript" charset="utf-8">
   var firebaseConfig = {
     apiKey: "AIzaSyCsFBpqVFA-5B0i4mL4cg2FHKQvgyX7qAY",
     authDomain: "rdg-1220.firebaseapp.com",
@@ -38,5 +38,5 @@
 
   const auth = firebase.auth();
   const db = firebase.firestore();
-</script>
+</script> -->
 </html>

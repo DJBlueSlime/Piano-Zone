@@ -1,12 +1,18 @@
-var loginForm = document.querySelector('#loginForm');
-  loginForm.addEventListener('submit', (e) => {
-    e.preventDefault();
+window.onload=function() {
+  var loginForm = document.querySelector("#loginForm");
+  if(loginForm){
+    loginForm.addEventListener('submit', (e) => {
+      e.preventDefault();
     
-    var email = loginForm['email'].value;
-    var password = loginForm['password'].value;
+      var email = loginForm['email'].value;
+      var password = loginForm['password'].value;
     
-    console.log(email, password)
-  })
+      console.log(email, password)
+    })
+  } else {
+    console.log("No se ha encontrado nad")
+  }
+}
   
   var firebaseConfig = {
     apiKey: "AIzaSyCsFBpqVFA-5B0i4mL4cg2FHKQvgyX7qAY",

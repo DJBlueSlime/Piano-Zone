@@ -12,8 +12,6 @@ window.onload=function() {
   } else {
     console.log("No se ha encontrado nad")
   }
-}
-  
   var firebaseConfig = {
     apiKey: "AIzaSyCsFBpqVFA-5B0i4mL4cg2FHKQvgyX7qAY",
     authDomain: "rdg-1220.firebaseapp.com",
@@ -27,7 +25,9 @@ window.onload=function() {
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
   firebase.analytics();
-
+  
   const auth = firebase.auth();
   const db = firebase.firestore();
-
+}
+  
+  

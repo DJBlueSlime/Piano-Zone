@@ -1,4 +1,4 @@
-window.onload=function() {
+window.onload = function() {
   var signupForm = document.querySelector("#signupForm");
   if(signupForm){
     signupForm.addEventListener('submit', (e) => {
@@ -11,8 +11,12 @@ window.onload=function() {
       auth.createUserWithEmailAndPassword(email, password).then(cred => {
         const userEmail = cred.user.email;
         console.log(cred);
-        signupForm.reset();
-        window.location.href = "index.html"
+        Swal.fire({
+          title: "Registrado Correctamente",
+          text: "Usted se ha registrado exitosamente",
+          confirmButtonColor: "#2ecc71",
+          confirmButtonText: "Perfecto"
+        })
       });
     })
   } else {

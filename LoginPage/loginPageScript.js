@@ -1,4 +1,4 @@
-window.onload=function() {
+window.onload = function() {
   var loginForm = document.querySelector("#loginForm");
   if(loginForm){
     loginForm.addEventListener('submit', (e) => {
@@ -9,8 +9,13 @@ window.onload=function() {
     
       auth.signInWithEmailAndPassword(email, password).then(cred => {
         console.log(cred.user);
-        loginForm.reset();
-        window.location.href = "index.html"
+        Swal.fire({
+            title: "Sesión Iniciada Correctamente",
+            text: "Se ha iniciado sesión exitosamente",
+            icon: "success",
+            confirmButtonColor: "#2ecc71",
+            confirmButtonText: "Excelente"
+          })
       })
     })
   } else {

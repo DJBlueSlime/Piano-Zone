@@ -4,20 +4,27 @@ window.onload=function() {
     signupForm.addEventListener('submit', (e) => {
       e.preventDefault();
     
-      var email = loginForm['signupEmail'].value;
-      var password = loginForm['signupPassword'].value;
+      var email = signupForm['signupEmail'].value;
+      var password = signupForm['signupPassword'].value;
+      var username = signupForm['signupName'].value;
     
-      auth.createUserWithEmailWithAndPassword(email, password).then(cred => {
+      auth.createUserWithEmailAndPassword(email, password).then(cred => {
+        const userEmail = cred.user.email;
+        console.log(cred)
         Swal.fire({
           title: "Registrado Correctamente",
-          text: "Usted se ha registrado exitosamente",
+          text: "Usted se ha registrado exitosamente como " + userEmail,
           confirmButtonColor: "#2ecc71",
-          confirmButtonText: "Perfecto"
+          confirmButtonText: "Perfecto",
+          icon: "success",
+          onclose: {
+            window.location.href = "index.html"
+          }
         })
-      })
+      }).catch
     })
   } else {
-    console.log("No se ha encontrado nad")
+    console.log("No se ha encontrado nada")
   }
   var firebaseConfig = {
     apiKey: "AIzaSyCsFBpqVFA-5B0i4mL4cg2FHKQvgyX7qAY",

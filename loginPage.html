@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Log In</title>
+   <link rel="stylesheet" href="LoginPage/loginPageStyles.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+Chettan+2:wght@700&display=swap" rel="stylesheet">
+  <script src="LoginPage/loginPageScript.js" type="text/javascript" charset="utf-8"></script>
+ <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-app.js"></script>
+ <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-auth.js"></script>
+ <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-firestore.js"></script>
+ <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-analytics.js"></script>
+ <script src="https://cdn.jsdeliver.net/npm/sweetalert2@9"></script>
+</head>
+<body>
+<form class="box" id="loginForm">
+  <h1>Iniciar Sesión</h1>
+  <input type="text" name="" id="email" placeholder="Correo Electrónico" required/>
+  <input type="password" name="" id="password" placeholder="Contraseña" required/>
+  <button class="sub" id="subBtn">Iniciar Sesión</button>
+  <h4>¿Todavía no eres un usuario?, <a href="signupPage.html">Regístrate aquí</a></h4>
+ </form>
+</body>
+<!-- <script type="text/javascript" charset="utf-8">
+  var firebaseConfig = {
+    apiKey: "AIzaSyCsFBpqVFA-5B0i4mL4cg2FHKQvgyX7qAY",
+    authDomain: "rdg-1220.firebaseapp.com",
+    databaseURL: "https://rdg-1220.firebaseio.com",
+    projectId: "rdg-1220",
+    storageBucket: "rdg-1220.appspot.com",
+    messagingSenderId: "736549219111",
+    appId: "1:736549219111:web:473c1270f3d846c7ad5702",
+    measurementId: "G-GDN2EH6GXK"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+
+  const auth = firebase.auth();
+  const db = firebase.firestore();
+</script> -->
+</html>

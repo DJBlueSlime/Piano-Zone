@@ -10,22 +10,19 @@ window.onload=function() {
     
       auth.createUserWithEmailAndPassword(email, password).then(cred => {
         const userEmail = cred.user.email;
-        console.log(cred)
-        Swal.fire({
-          title: "Registrado Correctamente",
-          text: "Usted se ha registrado exitosamente como " + userEmail,
-          confirmButtonColor: "#2ecc71",
-          confirmButtonText: "Perfecto",
-          icon: "success",
-          onclose: {
-            window.location.href = "index.html"
-          }
-        })
-      }).catch
+        console.log(cred);
+        signupForm.reset();
+        window.location.href = "index.html"
+      });
     })
   } else {
     console.log("No se ha encontrado nada")
   }
+  function redirectAndReset() {
+    signupForm.reset();
+    window.location.href = "index.html";
+  }
+  
   var firebaseConfig = {
     apiKey: "AIzaSyCsFBpqVFA-5B0i4mL4cg2FHKQvgyX7qAY",
     authDomain: "rdg-1220.firebaseapp.com",

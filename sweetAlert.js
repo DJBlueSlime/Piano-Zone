@@ -29,21 +29,29 @@
     console.log(uName);
   }
 })()*/
-Swal.fire({
-  title: "Saludos",
-  text: "Por favor Inicia sesión o Regístrate",
-  showCancelButton: true,
-  confirmButtonText: "Iniciar Sesión",
-  cancelButtonText: "Regístrarse",
-  icon: "info",
-  backdrop: true,
-  padding: "0.8rem"
-}).then((result) => {
-  if (result.value){
-    window.location.href = "LoginPage/loginPage.html"
-  } else if(
-      result.dismiss === Swal.DismissReason.cancel
-    ){
-      window.location.href = "SignupPage/signupPage.html"
+window.onload=function(){
+  const auth = firebase.auth();
+  const db = firebase.firestore();
+  auth.onAuthStateChanged(user => {
+    if (!user) {
+      Swal.fire({
+        title: "Saludos",
+        text: "Por favor Inicia sesión o Regístrate",
+        showCancelButton: true,
+        confirmButtonText: "Iniciar Sesión",
+        cancelButtonText: "Regístrarse",
+        icon: "info",
+        backdrop: true,
+        padding: "0.8rem"
+      }).then((result) => {
+        if (result.value) {
+          window.location.href = "loginPage.html"
+        } else if (
+          result.dismiss === Swal.DismissReason.cancel
+        ) {
+          window.location.href = "signupPage.html"
+        }
+      })
     }
-})
+  })
+}

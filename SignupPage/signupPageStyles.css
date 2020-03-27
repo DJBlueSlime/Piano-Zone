@@ -64,7 +64,7 @@ body{
 .box input[type="submit"]:hover{
   background: #2ecc71;
 }*/
-.box .sub{
+.box .signupSub{
   border: 0;
   background: none;
   display: block;
@@ -79,11 +79,6 @@ body{
   cursor: pointer;
 }
 
-.box .sub:hover{
+.box .signupSub:hover{
   background: #2ecc71;
-}
-.signUpHere{
-  color: white;
-  text-align: center;
-  padding-top: 0px;
 }

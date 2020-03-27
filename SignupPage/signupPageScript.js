@@ -1,21 +1,19 @@
 window.onload=function() {
-  var loginForm = document.querySelector("#loginForm");
-  if(loginForm){
-    loginForm.addEventListener('submit', (e) => {
+  var signupForm = document.querySelector("#signupForm");
+  if(signupForm){
+    signupForm.addEventListener('submit', (e) => {
       e.preventDefault();
     
-      var email = loginForm['email'].value;
-      var password = loginForm['password'].value;
+      var email = loginForm['signupEmail'].value;
+      var password = loginForm['signupPassword'].value;
     
-      console.log(email, password)
-      auth.signInWithEmailAndPassword(email, password).then(cred => {
-          Swal.fire({
-            title: "Sesión Iniciada Correctamente",
-            text: "Se ha iniciado sesión exitosamente",
-            icon: "success",
-            confirmButtonColor: "#2ecc71",
-            confirmButtonText: "Excelente"
-          })
+      auth.createUserWithEmailWithAndPassword(email, password).then(cred => {
+        Swal.fire({
+          title: "Registrado Correctamente",
+          text: "Usted se ha registrado exitosamente",
+          confirmButtonColor: "#2ecc71",
+          confirmButtonText: "Perfecto"
+        })
       })
     })
   } else {

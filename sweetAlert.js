@@ -1,4 +1,4 @@
-(async () => {
+/*(async () => {
  const {value: name} = await Swal.fire({
     title: "Saludos!",
     text: "Por favor ingresa tu nombre",
@@ -28,4 +28,22 @@
     })
     console.log(uName);
   }
-})()
+})()*/
+Swal.fire({
+  title: "Saludos",
+  text: "Por favor Inicia sesión o Regístrate",
+  showCancelButton: true,
+  confirmButtonText: "Iniciar Sesión",
+  cancelButtonText: "Regístrarse",
+  icon: "info",
+  backdrop: true,
+  padding: "0.8rem"
+}).then((result) => {
+  if (result.value){
+    window.location.href = "LoginPage/loginPage.html"
+  } else if(
+      result.dismiss === Swal.DismissReason.cancel
+    ){
+      window.location.href = "SignupPage/signupPage.html"
+    }
+})

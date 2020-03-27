@@ -7,20 +7,20 @@ window.onload=function() {
       var email = loginForm['email'].value;
       var password = loginForm['password'].value;
     
-      console.log(email, password)
       auth.signInWithEmailAndPassword(email, password).then(cred => {
-          Swal.fire({
-            title: "Sesión Iniciada Correctamente",
-            text: "Se ha iniciado sesión exitosamente",
-            icon: "success",
-            confirmButtonColor: "#2ecc71",
-            confirmButtonText: "Excelente"
-          })
+        console.log(cred.user);
+        loginForm.reset();
+        window.location.href = "index.html"
       })
     })
   } else {
-    console.log("No se ha encontrado nad")
+    console.log("No se ha encontrado nada")
   }
+  function resetAndRedirect() {
+    loginForm.reset();
+    window.location.href = "index.html"
+  }
+  
   var firebaseConfig = {
     apiKey: "AIzaSyCsFBpqVFA-5B0i4mL4cg2FHKQvgyX7qAY",
     authDomain: "rdg-1220.firebaseapp.com",

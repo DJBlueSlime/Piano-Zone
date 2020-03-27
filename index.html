@@ -8,10 +8,16 @@
 
   <title>Piano Notes</title>
   <script type="text/javascript" charset="utf-8">
+  
   var finalNote;
   window.onload = function(){
       var genBtn = document.getElementById("gen").addEventListener("click",displayNote)
       var Inote = document.getElementById("note");
+      var logout = document.getElementById("logout")
+      logout.addEventListener('submit', (e) => {
+        e.preventDefault();
+        auth.signOut()
+      })
     }
   
   function genNote(){
@@ -60,6 +66,7 @@ function displayNote(){
   <div class="genBtn" id="genBtn">
   <button type="submit" class="generate" id="gen"onclick=genNote()>
     Generate Note <span class="icon-music"></span></span>
+    <button type="submit" id="logout" class="generate">Logout</button>
   </button>
   </div>
  </div>

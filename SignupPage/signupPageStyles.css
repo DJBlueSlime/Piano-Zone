@@ -96,22 +96,24 @@ a{
   text-transform: uppercase;
   text-decoration: none;
   box-sizing: border-box;
-  background: linear-gradient(90deg, #03a9f4, #f441a5, #03a9fa);
+  background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9fa);
   background-size: 400%;
   border-radius: 30px;
   z-index: 1;
 }
 
 a:hover{
-  animation: animate 8s linear infinite
+  animation: animate 8s linear infinite;
 }
 
 @keyframes animate{
-  0% {
+  0%
+  {
     background-position: 0%
   }
-  100%{
-    background-size: 100%
+  100%
+  {
+    background-size: 400%
   }
 }
 
@@ -126,7 +128,6 @@ a:before{
   background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb36, #03a9f4);
   background-size: 400%;
   border-radius: 40px;
-  filter: blur(20px);
   opacity: 0;
   transition: 0.5s;
 }

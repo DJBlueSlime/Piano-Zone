@@ -101,7 +101,7 @@ a{
   text-transform: uppercase;
   text-decoration: none;
   box-sizing: border-box;
-  background: linear-gradient(90deg, #03a9f4, #f441a5, #03a9fa);
+  background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9fa);
   background-size: 400%;
   border-radius: 30px;
   z-index: 1;

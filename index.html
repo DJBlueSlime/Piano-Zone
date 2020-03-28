@@ -9,12 +9,6 @@
   <script src="https://code.jquery.com/jquery-3.3.1.js" type="text/javascript" charset="utf-8"></script>
   <title>Piano Notes</title>
   <script type="text/javascript" charset="utf-8">
-  var $page = ('.page')
-  var $main = ('.content')
-      $('.menu_toggle').on('click', function(){
-      $page.toggleClass('real');
-    })
-      $('')
   var finalNote;
   window.onload = function(){
       var genBtn = document.getElementById("gen").addEventListener("click",displayNote)
@@ -69,18 +63,18 @@ function displayNote(){
 </head>
 
 <body>
-  <div class="page">
+ <!-- <div class="page">
     <span class="menu_toggle">
       <i class="menu_open fa fa-bars fa-lg"></i>
       <i class="menu_close fa fa-times fa-lg"></i>
-      <ul class="menu_items">
-        <li><a href="#"><i class="fa fa-user fa-2x"></i>
+     </span>
+     <ul class="menu_items">
+       <li><a href="#"><i class="fa fa-user fa-2x"></i>
        Profile</a>
        </li>
-      </ul>
-    </span>
-  </div>
-<main class="content">
+     </ul>
+ 
+  </div>-->
   <div class="elem "id="elem"><p class="elemText">Play this note:</p>
   </div>
  <div class="displayContainer" id="displayContainer">
@@ -94,7 +88,6 @@ function displayNote(){
   </button>
   </div>
  </div>
-</main>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 <script src="sweetAlert.js"></script>
 </body>

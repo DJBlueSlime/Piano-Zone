@@ -56,7 +56,7 @@ body {
   color: #ffffff;
 }
 
-*{
+/*{
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -76,7 +76,7 @@ html, body{
   height: 200%;
   transform-origin: top left;
   transition: transform 0.7s cubic-bezier(1, 0.005, 0.24, 1)
-  /*background-color: #f0f0f0*/
+  /*background-color: #f0f0f0
 }
 
 .menu_toggle{
@@ -193,4 +193,4 @@ html, body{
 .real .menu_item li{
   transform: translateX(0);
   transition: transform 0.3s 0.45s cubic-bezier(0.175, 0.885, 0.32, 1.27s)
-}
+}*/

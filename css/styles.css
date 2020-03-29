@@ -125,7 +125,6 @@ a{
   background-size: 400%;
   border-radius: 30px;
   z-index: 1;
-  overflow: hidden;
 }
 
 a:hover{

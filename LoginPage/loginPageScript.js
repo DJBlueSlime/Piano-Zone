@@ -15,18 +15,26 @@ window.onload = function() {
             icon: "success",
             confirmButtonColor: "#2ecc71",
             confirmButtonText: "Excelente"
+          }).then(() => {
+            setTimeout(function(){
+              window.location.href = "index.html"
+            }, 400)
+            Swal.fire({
+              title: "Redirigiendote...",
+              onBeforeOpen: () => {
+                Swal.showLoading();
+              }
+            })
           })
+      }).catch(err => {
+        Swal.fire({
+              title: "Hubo un error",
+              text: "Ha sucedido un error: " + err.message,
+              icon: "error"
       })
-    })
-  } else {
-    console.log("No se ha encontrado nada")
-  }
-  function resetAndRedirect() {
-    loginForm.reset();
-    window.location.href = "index.html"
-  }
-  
-  var firebaseConfig = {
+  })
+
+ var firebaseConfig = {
     apiKey: "AIzaSyCsFBpqVFA-5B0i4mL4cg2FHKQvgyX7qAY",
     authDomain: "rdg-1220.firebaseapp.com",
     databaseURL: "https://rdg-1220.firebaseio.com",
@@ -42,6 +50,6 @@ window.onload = function() {
   
   const auth = firebase.auth();
   const db = firebase.firestore();
+  }
 }
-  
   

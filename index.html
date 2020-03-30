@@ -5,15 +5,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://fonts.googleapis.com/css2?family=Baloo+Chettan+2:wght@700&display=swap" rel="stylesheet">
-
+<script src="https://kit.fontawesome.com/945214be6c.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.js" type="text/javascript" charset="utf-8"></script>
   <title>Piano Notes</title>
   <script type="text/javascript" charset="utf-8">
-  
   var finalNote;
   window.onload = function(){
       var genBtn = document.getElementById("gen").addEventListener("click",displayNote)
       var Inote = document.getElementById("note");
       var logout = document.getElementById("logout")
+      auth.signOut()
       logout.addEventListener('submit', (e) => {
         e.preventDefault();
         auth.signOut();
@@ -42,6 +43,11 @@
   console.log(notaAleatoria)
   displayNote();
 }
+
+function logout(){
+  auth.signO 
+}
+
 function displayNote(){
   var Inote = document.getElementById("note")
       Inote.value = finalNote;
@@ -57,6 +63,18 @@ function displayNote(){
 </head>
 
 <body>
+ <!-- <div class="page">
+    <span class="menu_toggle">
+      <i class="menu_open fa fa-bars fa-lg"></i>
+      <i class="menu_close fa fa-times fa-lg"></i>
+     </span>
+     <ul class="menu_items">
+       <li><a href="#"><i class="fa fa-user fa-2x"></i>
+       Profile</a>
+       </li>
+     </ul>
+ 
+  </div>-->
   <div class="elem "id="elem"><p class="elemText">Play this note:</p>
   </div>
  <div class="displayContainer" id="displayContainer">
@@ -70,7 +88,6 @@ function displayNote(){
   </button>
   </div>
  </div>
-
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 <script src="sweetAlert.js"></script>
 </body>

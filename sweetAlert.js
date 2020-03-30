@@ -29,7 +29,7 @@
     console.log(uName);
   }
 })()*/
-window.onload=function(){
+window.onload =function(){
   const auth = firebase.auth();
   const db = firebase.firestore();
   auth.onAuthStateChanged(user => {

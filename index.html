@@ -14,8 +14,7 @@
       var genBtn = document.getElementById("gen").addEventListener("click",displayNote)
       var Inote = document.getElementById("note");
       var logout = document.getElementById("logout")
-      auth.signOut()
-      logout.addEventListener('submit', (e) => {
+      logout.addEventListener('click', (e) => {
         e.preventDefault();
         auth.signOut();
       })

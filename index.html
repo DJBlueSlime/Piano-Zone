@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" type="text/css" media="all" />
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://fonts.googleapis.com/css2?family=Baloo+Chettan+2:wght@700&display=swap" rel="stylesheet">
 <script src="https://kit.fontawesome.com/945214be6c.js" crossorigin="anonymous"></script>
-  <script src="https://code.jquery.com/jquery-3.3.1.js" type="text/javascript" charset="utf-8"></script>
   <title>Piano Notes</title>
   <script type="text/javascript" charset="utf-8">
   var finalNote;
@@ -63,18 +64,39 @@ function displayNote(){
 </head>
 
 <body>
- <!-- <div class="page">
-    <span class="menu_toggle">
-      <i class="menu_open fa fa-bars fa-lg"></i>
-      <i class="menu_close fa fa-times fa-lg"></i>
-     </span>
-     <ul class="menu_items">
-       <li><a href="#"><i class="fa fa-user fa-2x"></i>
-       Profile</a>
-       </li>
-     </ul>
- 
-  </div>-->
+  <link rel="stylesheet" href="css/styles.css"/>
+  <div id="curtain">
+    <span></span>
+    <span></span>
+    <span></span>
+    <ul>
+      <li><a href="#" data-text="Account">Account</a></li>
+      <li><a href="#" data-text="About">About</a></li>
+      <li><a href="#" data-text="Home">Home</a></li>
+      <li><a href="#" data-text="
+      Donate Us">Donate Us</a></li>
+    <!--  <li><a href="#" data-text=""></a></li>
+    </ul>-->
+    <div class="toggle">
+      
+    </div>
+  </div>
+    <script type="text/javascript" charset="utf-8">
+      console.log('%cRandom Note Generator', 'font-size: 25px; color: skyblue; text-transform: uppercase; font-family: Baloo Chettan 2;')
+      console.log("Bienvenido a la consola, puedes ejecutar el comando help(); para una lista de comandos disponibles")
+      function help(){
+        console.log("1. jqueryVer(); : Para ver la version de JQuery")
+		console.log("2. jqueryVer(); : Other")
+      }
+      
+      function jqueryVer(){
+        console.log($.fn.jquery)
+      }
+      
+      $('.toggle').on('click', function(){
+        $('#curtain').toggleClass('active')
+      })
+    </script>
   <div class="elem "id="elem"><p class="elemText">Play this note:</p>
   </div>
  <div class="displayContainer" id="displayContainer">
@@ -95,8 +117,6 @@ function displayNote(){
 <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-auth.js"></script>
 <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-firestore.js"></script>
-<!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
 <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-analytics.js"></script>
 
 <script>

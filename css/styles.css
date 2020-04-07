@@ -133,10 +133,10 @@ a:hover{
 
 @keyframes animate{
   0% {
-    background-position: 0%
+    background-position: 0%;
   }
   100%{
-    background-position: 400%
+    background-position: 400%;
   }
 }
 
@@ -159,4 +159,26 @@ a:hover:before{
   filter: blur(20px);
   opacity: 1;
   animation: animate 8s linear infinite;
+}
+
+span{
+  position: absolute;
+  background: white;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  border-radius: 50%;
+  animation: ripples 1s linear infinite;
+}
+
+@keyframes ripples{
+  0%{
+    width: 0px;
+    height: 0px;
+    opacity: 0.5;
+  }
+  100%{
+    width: 500px;
+    height: 500px;
+    opacity: 0;
+  }
 }

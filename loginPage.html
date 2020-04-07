@@ -22,9 +22,27 @@
   <button class="sub" id="subBtn">Iniciar Sesión</button>
   <h4>¿Todavía no eres un usuario?</h4>
   <br/>
-  <a href="loginPage.html">Regístrate aquí</a>
+  <a href="signupPage.html">Regístrate aquí</a>
   <br/>
  </form>
+ <script type="text/javascript" charset="utf-8">
+   const buttons = document.querySelectorAll('a');
+   buttons.forEach(btn => {
+     btn.addEventListener('click', function(e){
+       let x = e.clientX - e.target.offsetLeft;
+       let y = e.clientY - e.target.offsetTop;
+       
+       let ripples = document.createElement('span');
+       ripples.style.left = x + 'px';
+       ripples.style.top = y + 'px';
+       this.appendChild(ripples);
+       
+       setTimeout(() => {
+         ripples.remove()
+       }, 1000)
+     })
+   })
+ </script>
 </body>
 <!-- <script type="text/javascript" charset="utf-8">
   var firebaseConfig = {

@@ -16,8 +16,24 @@ window.onload = function() {
           text: "Usted se ha registrado exitosamente",
           confirmButtonColor: "#2ecc71",
           confirmButtonText: "Perfecto"
+        }).then(() => {
+          setTimeout(function(){
+            window.location.href = "index.html"
+          }, 400)
+          Swal.fire({
+            title: "Redirigiendote...",
+            onBeforeOpen: () => {
+              Swal.showLoading();
+            }
+          })
         })
-      });
+      }).catch(err => {
+        Swal.fire({
+              title: "Hubo un error",
+              text: "Ha sucedido un error: " + err.message,
+              icon: "error"
+        })
+      })
     })
   } else {
     console.log("No se ha encontrado nada")

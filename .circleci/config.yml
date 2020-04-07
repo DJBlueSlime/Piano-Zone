@@ -7,8 +7,8 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Install dependencies and build project
-          command: ********** CHANGE ME 2 **********
+          name: Echo something
+          command: echo This works pretty cool huh
       - sonarcloud/scan
 
 orbs:

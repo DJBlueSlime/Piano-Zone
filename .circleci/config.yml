@@ -8,7 +8,7 @@ jobs:
       - checkout
       - run:
           name: Echo something
-          command: echo This works pretty cool huh
+          command: echo This works pretty cool 
       - sonarcloud/scan
 
 orbs:

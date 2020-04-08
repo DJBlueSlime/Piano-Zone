@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" type="text/css" media="all" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Chettan+2:wght@700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/945214be6c.js" crossorigin="anonymous"></script>
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="Misc/SignupOptions/css/optionsStyles.css" type="text/css" media="all" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+</head>
+
+<body>
+<div class="options">
+  <button type="submit" class="email">Correo Electrónico</button>
+  <img class="googleImg" src="img/google-dark-normal.png" alt="Google"/>
+</div>
+
+
+<!--// Begin of Firebase JS SDK Block //-->
+<script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-performance.js"></script>
+<!--// End of Firebase JS SDK block //-->
+<script type="text/javascript" charset="utf-8">
+    var firebaseConfig = {
+    apiKey: "AIzaSyCsFBpqVFA-5B0i4mL4cg2FHKQvgyX7qAY",
+    authDomain: "rdg-1220.firebaseapp.com",
+    databaseURL: "https://rdg-1220.firebaseio.com",
+    projectId: "rdg-1220",
+    storageBucket: "rdg-1220.appspot.com",
+    messagingSenderId: "736549219111",
+    appId: "1:736549219111:web:473c1270f3d846c7ad5702",
+    measurementId: "G-GDN2EH6GXK"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+    const auth = firebase.auth();
+    const db = firebase.firestore();
+</script>
+<script src="Misc/SignupOptions/scripts/options.js" type="text/javascript" charset="utf-8"></script>
+</body>
+
+</html>

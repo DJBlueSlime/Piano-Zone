@@ -5,46 +5,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Sign Up</title>
-   <link rel="stylesheet" href="css/styles.css"/>
+   <link rel="stylesheet" href="SignupPage/signupPageStyles.css"/>
   <link href="https://fonts.googleapis.com/css2?family=Baloo+Chettan+2:wght@700&display=swap" rel="stylesheet">
   <script src="SignupPage/signupPageScript.js" type="text/javascript" charset="utf-8"></script>
  <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-app.js"></script>
  <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-auth.js"></script>
  <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-firestore.js"></script>
  <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-analytics.js"></script>
-
+ <script src="https://cdn.jsdeliver.net/npm/sweetalert2@9"></script>
 </head>
 <body>
-   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 <form class="box" id="signupForm">
   <h1>Registrarse</h1>
   <input type="text" name="" id="signupName" placeholder="Nombre de usuario" required/>
   <input type="text" name="" id="signupEmail" placeholder="Correo Electrónico" required/>
   <input type="password" name="" id="signupPassword" placeholder="Elige una Contraseña" required/>
   <button class="signupSub" id="subBtn2">Registrarse</button>
-  <h4>¿Ya eres un usuario?</h4>
-  <br/>
-  <a href="loginPage.html" class="btn">Inicia sesión aquí</a>
-  <br/>
+  <h5>or</h5>
+  <img class="google" src="" alt="" />
+  <h4>¿Ya eres un usuario?, <a href="loginPage.html">Inicia sesión aquí</a></h4>
  </form>
- <script type="text/javascript" charset="utf-8">
-   const buttons = document.querySelectorAll('a');
-   buttons.forEach(btn => {
-     btn.addEventListener('click', function(e){
-       let x = e.clientX - e.target.offsetLeft;
-       let y = e.clientY - e.target.offsetTop;
-       
-       let ripples = document.createElement('span');
-       ripples.style.left = x + 'px';
-       ripples.style.top = y + 'px';
-       this.appendChild(ripples);
-       
-       setTimeout(() => {
-         ripples.remove()
-       }, 1000)
-     })
-   })
- </script>
 </body>
 <!-- <script type="text/javascript" charset="utf-8">
   var firebaseConfig = {
